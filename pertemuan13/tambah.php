@@ -50,7 +50,7 @@ if(isset($_POST["submit"])){
                 <input type="file" id="logo" name="logo" placeholder=logo>
             </li>
             <li>
-                <button type="submit" name=submit>Tambah</button>
+                <button type="submit" name=submit>Ubah</button>
             </li>
         </ul>
     </form>

@@ -91,7 +91,14 @@ function ubah($data){
     $nama = htmlspecialchars($data["nama"]);
     $ibu_kota = htmlspecialchars($data["ibu_kota"]);
     $jml_penduduk = htmlspecialchars($data["jml_penduduk"]);
-    $logo = htmlspecialchars($data["logo"]);
+    $logoLama = htmlspecialchars($data["logoLama"]);
+
+    //cek apakah user upload file
+    if($_FILES['logo']['error'] === 4){
+        $logo = $logoLama;
+    } else {
+        $logo = upload();
+    }
 
     $query = "UPDATE provinces SET 
             nama ='$nama', 

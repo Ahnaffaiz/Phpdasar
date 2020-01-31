@@ -36,8 +36,10 @@ if(isset($_POST["submit"])){
 <body>
     <h1>Edit data provinsi</h1>
     <br>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
+        <!--hidden untuk menyembunyikan histori input-->
         <input type="hidden" name="id" value="<?php echo $province["id"]; ?>",>
+        <input type="hidden" name="logoLama" value="<?php echo $province["logo"]; ?>",>
         <ul>
             <li>
                 <label for="nama">Nama Provinsi :</label>
@@ -52,8 +54,9 @@ if(isset($_POST["submit"])){
                 <input type="text" id="jml_penduduk" name="jml_penduduk" value="<?php echo $province["jml_penduduk"]; ?>" required>
             </li>
             <li>
-                <label for="logo">Logo</label>
-                <input type="text" id="logo" name="logo" value="<?php echo $province["logo"]; ?>" required>
+                <label for="logo">Logo</label> <br>
+                <img src="logo/<?php echo $province['logo'] ?>" alt="" width="40"> <br>
+                <input type="file" id="logo" name="logo" ?>"
             </li>
             <li>
                 <button type="submit" name=submit>Tambah</button>
