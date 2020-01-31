@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     } else {
         echo "
         <script>
-            alert('data berhasil ditambahkan');
+            alert('data gagal ditambahkan');
             document.location.href='index.php';
         </script>
         ";
@@ -30,6 +30,7 @@ if(isset($_POST["submit"])){
 <body>
     <h1>Tambah data provinsi</h1>
     <br>
+    <!--multipart untuk mengolah data yang diupload sehingga file yang diupload diolah $_FILES -->
     <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
@@ -46,7 +47,7 @@ if(isset($_POST["submit"])){
             </li>
             <li>
                 <label for="logo">Logo</label>
-                <input type="file" id="logo" name="logo" placeholder=logo required>
+                <input type="file" id="logo" name="logo" placeholder=logo>
             </li>
             <li>
                 <button type="submit" name=submit>Tambah</button>

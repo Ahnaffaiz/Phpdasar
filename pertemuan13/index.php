@@ -1,6 +1,6 @@
 <?php 
 require 'functions.php' ;
-$provinces = query("SELECT * FROM provinces ORDER BY id DESC");
+$provinces = query("SELECT * FROM provinces ORDER BY id ASC");
 
 //apakah pencarian sudah ditekan ?
 if( isset($_POST["cari"])){
