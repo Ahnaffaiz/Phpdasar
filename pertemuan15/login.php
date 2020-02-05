@@ -10,7 +10,6 @@ require 'functions.php';
             //cek password
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row['password'])){
-                var_dump($row['password']);
                 header("location: index.php");
                 exit;
             }
